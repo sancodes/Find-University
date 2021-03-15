@@ -79,53 +79,53 @@
                 placeholder="enter University Web Page..." />
             <lightning:input value="{!v.uniObj.Alpha_Two_Code__c}" label="Alpha Two Code"
                 placeholder="enter Alpha Two Code..." />
-            div><br />
-            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
-                <thead>
-                    <tr>
-                        <th class="slds-text-title_caps" scope="col">
-                            <div class="slds-truncate" title="University Name">University Name</div>
-                        </th>
-                        <th class="slds-text-title_caps" scope="col">
-                            <div class="slds-truncate" title="Country">Country</div>
-                        </th>
-                        <th class="slds-text-title_caps" scope="col">
-                            <div class="slds-truncate" title="Domain">University Domain</div>
-                        </th>
-                        <th class="slds-text-title_caps" scope="col">
-                            <div class="slds-truncate" title="Web Page">University Web Page</div>
-                        </th>
-                        <th class="slds-text-title_caps" scope="col">
-                            <div class="slds-truncate" title="Alpha Two Code">University Alpha Two Code</div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <aura:iteration items="{!v.universityList}" var="item" indexVar="index">
+            <div><br />
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
                         <tr>
-                            <td data-label="University Name" scope="row">
-                                <div class="slds-truncate" title="UniversityName">{!item.Name} </div>
-                            </td>
-                            <td data-label="Country">
-                                <div class="slds-truncate" title="Country">{!item.Country__c}</div>
-                            </td>
-                            <td data-label="University Domain">
-                                <div class="slds-truncate" title="UniversityDomain">{!item.Domains__c }</div>
-                            </td>
-                            <td data-label="University Web Page">
-                                <div class="slds-truncate" title="UniversityWebPage">{!item.Web_Pages__c }</div>
-                            </td>
-                            <td data-label="Alpha Two Code">
-                                <div class="slds-truncate" title="AlphaTwoCode">{!item.Alpha_Two_Code__c }</div>
-                            </td>
+                            <th class="slds-text-title_caps" scope="col">
+                                <div class="slds-truncate" title="University Name">University Name</div>
+                            </th>
+                            <th class="slds-text-title_caps" scope="col">
+                                <div class="slds-truncate" title="Country">Country</div>
+                            </th>
+                            <th class="slds-text-title_caps" scope="col">
+                                <div class="slds-truncate" title="Domain">University Domain</div>
+                            </th>
+                            <th class="slds-text-title_caps" scope="col">
+                                <div class="slds-truncate" title="Web Page">University Web Page</div>
+                            </th>
+                            <th class="slds-text-title_caps" scope="col">
+                                <div class="slds-truncate" title="Alpha Two Code">University Alpha Two Code</div>
+                            </th>
                         </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.universityList}" var="item" indexVar="index">
+                            <tr>
+                                <td data-label="University Name" scope="row">
+                                    <div class="slds-truncate" title="UniversityName">{!item.Name} </div>
+                                </td>
+                                <td data-label="Country">
+                                    <div class="slds-truncate" title="Country">{!item.Country__c}</div>
+                                </td>
+                                <td data-label="University Domain">
+                                    <div class="slds-truncate" title="UniversityDomain">{!item.Domains__c }</div>
+                                </td>
+                                <td data-label="University Web Page">
+                                    <div class="slds-truncate" title="UniversityWebPage">{!item.Web_Pages__c }</div>
+                                </td>
+                                <td data-label="Alpha Two Code">
+                                    <div class="slds-truncate" title="AlphaTwoCode">{!item.Alpha_Two_Code__c }</div>
+                                </td>
+                            </tr>
 
-                    </aura:iteration>
-                </tbody>
-            </table>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
-
-
 
         <footer class="slds-card__footer">
             <div class="demo-only" style="height: 4rem;">
