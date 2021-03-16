@@ -3,7 +3,6 @@ public with Sharing class UniversityApi {
     //variable will hold the items to be transported in the UI
     public static List<University__c> listOfCountryUniversities = new List<University__c>();
     
-    //FIX THE SPACE 'LIKE ADD +'
     @AuraEnabled
     public static String consumeApi(String country){
         Http http = new Http();
@@ -25,7 +24,6 @@ public with Sharing class UniversityApi {
 				* 	- decided to transport the items inside the List as an objects. 
                 *      [{name: ..., country: ..., }, {name: ...., country: ....}]
 				*/
-                system.debug('HI' + resMap.get('name'));
                 University__c  uni = new University__c(
                 			Name=(String)resMap.get('name'), 
                             Country__c = (String)resMap.get('country'), 
@@ -33,25 +31,14 @@ public with Sharing class UniversityApi {
                             Domains__c = (String) domain[0],
                             Web_Pages__c = (String) web_pages[0]
                 );
-                /*
-                system.debug('JJ' + uni);
-                listOfCountryUniversities.add(
-                    new Map<String, String>{
-                        	'university_name'=> (String)resMap.get('name'), 
-                            'country' => (String)resMap.get('country'), 
-                            'alpha_two_code' => (String) resMap.get('alpha_two_code'),
-                            'university_domain' => (String) domain[0],
-                            'uni_web_pages' => (String) web_pages[0]
-                    });
-                */
-                listOfCountryUniversities.add(uni);
+                //instead of passing as a List<map<string,string>>, I'm passing as a instance of University__c object
+                listOfCountryUniversities.add(uni); 
             }
         }
         
         return null;
     }
-    
-	
+
     //before passing in the input to the api call it will make sure that the input value is
     //space free and if has space, added with '+'
     @AuraEnabled
@@ -64,6 +51,7 @@ public with Sharing class UniversityApi {
     //renaming the country and passing it to consumingApi(...)
     //if no space then just this function could be like a check to see if the white space exists
     public static String removeSpaceAddPlus(String country){
+        country=country.toLowerCase(); //converting to a lower case
         if(country.containsWhitespace())
         	country = country.replace(' ', '+');
         return country;
@@ -81,19 +69,5 @@ public with Sharing class UniversityApi {
     @AuraEnabled
     public static List<University__c> retrieveUniversities(){
         return [SELECT ID, Name, Web_Pages__c, Country__c, Domains__c, Alpha_Two_Code__c FROM University__c ORDER BY CreatedDate DESC LIMIT 5];
-    }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    } 
 }
