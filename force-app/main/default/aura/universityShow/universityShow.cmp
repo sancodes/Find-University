@@ -42,7 +42,7 @@
 
 
 
-    <!--After DB -->
+    <!--Maybe next component? for below code-->
 
 
 
@@ -58,7 +58,7 @@
     <aura:attribute name="universityId" type="String" />
     <aura:attribute name="universityList" type="University__c[]" />
     <aura:handler name="init" value="{!this}" action="{!c.showUniversities}" />
-
+<!-- below this could be erased as this is manual  -->
     <article class="slds-card">
         <div class="slds-card__header slds-grid">
             <header class="slds-media slds-media_center slds-has-flexi-truncate">
@@ -88,7 +88,11 @@
                 placeholder="enter University Web Page..." />
             <lightning:input value="{!v.uniObj.Alpha_Two_Code__c}" label="Alpha Two Code"
                 placeholder="enter Alpha Two Code..." />
-            <div><br />
+            <!-- below this could be erased as this is manual  -->
+            
+            <!-- below here could be the component, as it just shows the saved data. -->
+                <div><br />
+
                 <table class="slds-table slds-table_cell-buffer slds-table_bordered">
                     <thead>
                         <tr>
@@ -136,6 +140,7 @@
 
         </div>
 
+        <!-- this could be the footer component -->
         <footer class="slds-card__footer">
             <div class="demo-only" style="height: 4rem;">
                 <div class="slds-notify_container slds-is-relative">
