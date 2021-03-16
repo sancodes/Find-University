@@ -7,6 +7,7 @@
             let state = res.getState();
             if(state === "SUCCESS"){
                 component.set("v.universityId", res.getReturnValue());
+                alert(component.get("v.universityId") + ' saved to University__c. Refresh the page.' );
             }
         })
         $A.enqueueAction(action);
