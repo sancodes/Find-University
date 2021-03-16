@@ -1,11 +1,5 @@
 ({
-	searchUniFn : function(component, event, helper) {
-		helper.searchUniFnhelperMethod(component, event);
+    myAction : function(component, event, helper) {
+		
 	},
-    doSave: function(component, event, helper){
-        helper.doSaveHelperMethod(component, event);
-    }, 
-    showUniversities: function(component, event, helper){
-        helper.showUniversitiesHelperMethod(component, event);
-    }
 })
