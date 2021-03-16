@@ -1,9 +1,9 @@
 public with Sharing class UniversityApi {
     
     //variable will hold the items to be transported in the UI
-    public static List<Map<String, String>> listOfCountryUniversities = new List<Map<String, String>>();
-
-    //consumes the api and retrieves needed json and stores them into the class variable
+    public static List<University__c> listOfCountryUniversities = new List<University__c>();
+    
+    //FIX THE SPACE 'LIKE ADD +'
     @AuraEnabled
     public static String consumeApi(String country){
         Http http = new Http();
@@ -25,6 +25,16 @@ public with Sharing class UniversityApi {
 				* 	- decided to transport the items inside the List as an objects. 
                 *      [{name: ..., country: ..., }, {name: ...., country: ....}]
 				*/
+                system.debug('HI' + resMap.get('name'));
+                University__c  uni = new University__c(
+                			Name=(String)resMap.get('name'), 
+                            Country__c = (String)resMap.get('country'), 
+                            Alpha_Two_Code__c = (String) resMap.get('alpha_two_code'),
+                            Domains__c = (String) domain[0],
+                            Web_Pages__c = (String) web_pages[0]
+                );
+                /*
+                system.debug('JJ' + uni);
                 listOfCountryUniversities.add(
                     new Map<String, String>{
                         	'university_name'=> (String)resMap.get('name'), 
@@ -33,9 +43,9 @@ public with Sharing class UniversityApi {
                             'university_domain' => (String) domain[0],
                             'uni_web_pages' => (String) web_pages[0]
                     });
-                
+                */
+                listOfCountryUniversities.add(uni);
             }
-            system.debug(listOfCountryUniversities);
         }
         
         return null;
@@ -45,7 +55,7 @@ public with Sharing class UniversityApi {
     //before passing in the input to the api call it will make sure that the input value is
     //space free and if has space, added with '+'
     @AuraEnabled
-    public static List<Map<String, String>> getListOfUniversitiesInACountry(String place){
+    public static List<University__c> getListOfUniversitiesInACountry(String place){
         consumeApi(removeSpaceAddPlus(place));
         return listOfCountryUniversities;
     }
@@ -62,6 +72,7 @@ public with Sharing class UniversityApi {
     //inserting the input into the database
     @AuraEnabled
     public static String saveToUniversityObject(University__c uniObj){
+        system.debug(uniObj);
         insert uniObj;
         return uniObj.Id;
     }
@@ -70,5 +81,19 @@ public with Sharing class UniversityApi {
     @AuraEnabled
     public static List<University__c> retrieveUniversities(){
         return [SELECT ID, Name, Web_Pages__c, Country__c, Domains__c, Alpha_Two_Code__c FROM University__c ORDER BY CreatedDate DESC LIMIT 5];
-    }   
+    }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 }
