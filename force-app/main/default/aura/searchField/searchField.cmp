@@ -1,0 +1,9 @@
+<aura:component controller="UniversityApi" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="inputFieldSearchCountry" type="String" />
+    <aura:attribute name="resultValue" type="List" />
+    <lightning:input type="text" label="Enter Country:" value="{!v.inputFieldSearchCountry}" />
+    <lightning:button label="Enter" onclick="{!c.searchUniFn}" />
+
+    <!--passing resultValue to the child component universityOutputs-->
+    <c:universityOutputs resultValueToChild="{!v.resultValue}" />
+</aura:component>
