@@ -1,6 +1,7 @@
 <aura:component controller="UniversityApi" implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute name="inputFieldSearchCountry" type="String" />
-    <aura:attribute name="resultValue" type="String" />
+    <aura:attribute name="resultValue" type="List" />
+    <aura:attribute name="truthy" type="Boolean" default="false" />
 
     <lightning:input type="text" label="Enter Country:" value="{!v.inputFieldSearchCountry}" />
     <lightning:button label="Enter" onclick="{!c.searchUniFn}" />
@@ -9,28 +10,35 @@
         <thead>
             <aura:iteration items="{!v.resultValue}" var="item">
                 <tr class="slds-text-title--caps">
+
+
                     <th>
-                        <div class="slds-truncate" title="University Name">{!item.university_name}</div>
+                        <div class="slds-truncate" title="University Name">{!item.Name}</div>
                     </th>
                     <th>
-                        <div class="slds-truncate" title="University Web Page">{!item.uni_web_pages}</div>
+                        <div class="slds-truncate" title="University Web Page">{!item.Web_Pages__c}</div>
                     </th>
                     <th>
-                        <div class="slds-truncate" title="Country Name">{!item.country}</div>
+                        <div class="slds-truncate" title="Country Name">{!item.Country__c}</div>
                     </th>
                     <th>
-                        <div class="slds-truncate" title="University Domain">{!item.university_domain}</div>
+                        <div class="slds-truncate" title="University Domain">{!item.Domains__c}</div>
                     </th>
                     <th>
-                        <div class="slds-truncate" title="Country Alpha Code">{!item.alpha_two_code}</div>
+                        <div class="slds-truncate" title="Country Alpha Code">{!item.Alpha_Two_Code__c}</div>
                     </th>
+                    <th>
+                        <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.doSave }"
+                            value="{!item}" />
+                    </th>
+
 
                 </tr>
             </aura:iteration>
         </thead>
     </table>
 
-
+    <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.doSave }" />
 
 
 
@@ -50,6 +58,7 @@
     <aura:attribute name="universityId" type="String" />
     <aura:attribute name="universityList" type="University__c[]" />
     <aura:handler name="init" value="{!this}" action="{!c.showUniversities}" />
+
     <article class="slds-card">
         <div class="slds-card__header slds-grid">
             <header class="slds-media slds-media_center slds-has-flexi-truncate">
@@ -149,4 +158,5 @@
 
         </footer>
     </article>
+
 </aura:component>
