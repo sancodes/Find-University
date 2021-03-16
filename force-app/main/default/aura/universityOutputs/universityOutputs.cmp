@@ -1,0 +1,38 @@
+<aura:component controller="UniversityApi" implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <!-- 'resultValueToChild' gets all the values from the 'resultValue' -->
+    <aura:attribute name="resultValueToChild" type="List" />
+    <aura:attribute name="universityId" type="String" />
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+        <thead>
+            <aura:iteration items="{!v.resultValueToChild }" var="item">
+                <tr class="slds-text-title--caps">
+                    <th>
+                        <div class="slds-truncate" title="University Name">{!item.Name}</div>
+                    </th>
+                    <th>
+                        <div class="slds-truncate" title="University Web Page">{!item.Web_Pages__c}</div>
+                    </th>
+                    <th>
+                        <div class="slds-truncate" title="Country Name">{!item.Country__c}</div>
+                    </th>
+                    <th>
+                        <div class="slds-truncate" title="University Domain">{!item.Domains__c}</div>
+                    </th>
+                    <th>
+                        <div class="slds-truncate" title="Country Alpha Code">{!item.Alpha_Two_Code__c}</div>
+                    </th>
+                    <th>
+                        <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.doSave }"
+                            value="{!item}" />
+                    </th>
+                </tr>
+            </aura:iteration>
+        </thead>
+    </table>
+
+
+    <!--passing universityId child component savedUniversities-->
+    <c:savedUniversities universityIdToChild="{!v.universityId}" />
+
+</aura:component>
