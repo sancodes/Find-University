@@ -13,7 +13,7 @@
     </p>
 
     API used: 
-    'http://universities.hipolabs.com/search?country='
+    http://universities.hipolabs.com/search?country= + {country name}
 
     <h4> Initial Planning </h4>
     <h4> Snapshots </h4>
