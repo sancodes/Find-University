@@ -11,6 +11,11 @@
     <p>
         Application that allows you to save your your favorite university across the globe.
     </p>
+
+    <ul>
+    <li>API used: </li> 
+    <li>http://universities.hipolabs.com/search?country</li>
+    </ul>
     <h4> Initial Planning </h4>
     <h4> Snapshots </h4>
     <ul>
