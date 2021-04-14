@@ -13,9 +13,8 @@
     </p>
 
     API used: 
-    ```
     'http://universities.hipolabs.com/search?country='
-    ```
+
     <h4> Initial Planning </h4>
     <h4> Snapshots </h4>
     <ul>
