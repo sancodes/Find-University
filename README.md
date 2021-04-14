@@ -58,16 +58,15 @@ Application that allows you to save your your favorite university across the glo
 <li> Apex is responsible for retrieving and passing HTTP requests data to JavaScript Controller</li>
 <li> JavaScript controller is responsible for passing the user input from front end to the backend Apex and also data binding to the Aura. Apex is responsible for fetching API via HTTP request and also interacting with the database.  </li>
 </ul>
-</ul>
-<br>
-<img src="/images/backendDesign.png" align="center">
-</ul>
+
 <br>
 <br>
 <li> Application Prototype </li>
+<p> Page structure </p>
+<img src="/images/pagestructure.png" align="center">
+<br>
 <p> Used Salesforce Digital Experience Site to work with UI. It made choosing colors, working with button functionalities and page display easier </p> <br>
 <img src="/images/prototype.png" align="center">
-<img src="/images/pagestructure.png" align="center">
 <br>
 <br>
 <h4>  Application Functionality </h4>
