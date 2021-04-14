@@ -18,8 +18,8 @@ Application that allows you to save your your favorite university across the glo
 <ul>
 <li> Schema Design </li>
 <p> Single model to store the result getting from API call.</p> <br>
-<img src="/images/universitySchema.png" align="center">
 <br>
+<img src="/images/universitySchema.png" align="center">
 <br>
 <li> Application Design </li>
 <ul>
@@ -34,9 +34,11 @@ Application that allows you to save your your favorite university across the glo
 <li> Data is rendered through Aura and CSS and SLDS is used for styling </li>
 <li> FrontEnd has been broken down many components to simplify the complexity of logic and design </li>
 <li> Components have been used, in which some holds nested components</li>
+<br>
 <img src="/images/customComponent.png" align="center">
 <br>
 <li> <strong>Components</strong>: 
+<br>
 <ul>
 <li>universityHeader</li>
     <li>universityShow</li>
