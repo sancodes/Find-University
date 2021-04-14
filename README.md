@@ -78,12 +78,12 @@
             <br>
         </ul>
     </ul>
-    <h4> Application Functionality </h4>
-    <ul>
-        <li> User should be able to search universities by typing countries name, and able to save the
-            university in the database for future reference. </li>
-    </ul>
 </div>
+<h4> Application Functionality </h4>
+<ul>
+    <li> User should be able to search universities by typing countries name, and able to save the
+        university in the database for future reference. </li>
+</ul>
 <div id="tech">
     <h3> Tools Used </h3>
     <ul>
