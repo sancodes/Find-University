@@ -63,20 +63,22 @@
                         and also interacting with the database. </li>
                 </ul>
             </li>
+            <br>
+            <p> Application Prototype </p>
+            <p> Used Salesforce Digital Experience Site to work with UI. It made choosing colors, working with
+                button functionalities and page display easier </p>
+            <br>
+            <p> Page structure </p>
+            <img src="/images/pagestructure.png" align="center">
+            <br>
+            <br>
+            <p> Full page prototype </p>
+            <img src="/images/prototype.png" align="center">
+            <br>
+            <br>
+            </li>
+            </li>
         </ul>
-        <br>
-        <p> Application Prototype </p>
-        <p> Used Salesforce Digital Experience Site to work with UI. It made choosing colors, working with
-            button functionalities and page display easier </p>
-        <br>
-        <p> Page structure </p>
-        <img src="/images/pagestructure.png" align="center">
-        <br>
-        <br>
-        <p> Full page prototype </p>
-        <img src="/images/prototype.png" align="center">
-        <br>
-        <br>
     </ul>
 </div>
 <h4> Application Functionality </h4>
