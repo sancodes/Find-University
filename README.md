@@ -62,10 +62,13 @@ Application that allows you to save your your favorite university across the glo
 <br>
 <br>
 <li> Application Prototype </li>
+<p> Used Salesforce Digital Experience Site to work with UI. It made choosing colors, working with button functionalities and page display easier </p>
+<br>
 <p> Page structure </p>
 <img src="/images/pagestructure.png" align="center">
 <br>
-<p> Used Salesforce Digital Experience Site to work with UI. It made choosing colors, working with button functionalities and page display easier </p> <br>
+ <br>
+ <p> Full page prototype </p>
 <img src="/images/prototype.png" align="center">
 <br>
 <br>
