@@ -32,10 +32,12 @@ Application that allows you to save your your favorite university across the glo
 <li> <strong>View</strong>: Aura Lightning Web Component
 <ul>
 <li> Data is rendered through Aura and CSS and SLDS is used for styling </li>
+<li> FrontEnd has been broken down many components to simplify the complexity of logic and design </li>
+<li> Components have been used, in which some holds nested components</li>
+<img src="/images/customComponent.png" align="center">
 <br>
 <li> <strong>Components</strong>: 
 <ul>
-<li> FrontEnd has been broken down many components to simplify the complexity of logic and design
 <li>universityHeader</li>
     <li>universityShow</li>
         <ul>
@@ -65,6 +67,7 @@ Application that allows you to save your your favorite university across the glo
 <li> Application Prototype </li>
 <p> Used Salesforce Digital Experience Site to work with UI. It made choosing colors, working with button functionalities and page display easier </p> <br>
 <img src="/images/prototype.png" align="center">
+<img src="/images/pagestructure.png" align="center">
 <br>
 <br>
 <h4>  Application Functionality </h4>
