@@ -17,13 +17,13 @@ Application that allows you to save your your favorite university across the glo
 <h4> Snapshots </h4>
 <ul>
 <li> Schema Design </li>
-<p> Single model to store the result getting from API call.</p> <br>
+<p> Single model to store the result getting from API call.</p>
 <br>
 <img src="/images/universitySchema.png" align="center">
 <br>
+<br>
 <li> Application Design </li>
 <ul>
-<li> Follows MVC architecture
 <li> <strong>Model</strong>: Salesforce Data Model
 <ul>
 <li> Data model is simple and contains single schema and will save and retrieve data from Salesforce Database </li>
@@ -37,8 +37,8 @@ Application that allows you to save your your favorite university across the glo
 <br>
 <img src="/images/customComponent.png" align="center">
 <br>
-<li> <strong>Components</strong>: 
 <br>
+<li> <strong>Components</strong>: 
 <ul>
 <li>universityHeader</li>
     <li>universityShow</li>
@@ -62,8 +62,7 @@ Application that allows you to save your your favorite university across the glo
 </ul>
 
 <br>
-<br>
-<li> Application Prototype </li>
+<p> Application Prototype </p>
 <p> Used Salesforce Digital Experience Site to work with UI. It made choosing colors, working with button functionalities and page display easier </p>
 <br>
 <p> Page structure </p>
