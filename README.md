@@ -13,7 +13,7 @@
     </p>
 
     API used: 
-    [link](http://universities.hipolabs.com/search?country= + {country name})
+    <a href="http://universities.hipolabs.com/search?country" target="_blank"> Link </a>
 
     <h4> Initial Planning </h4>
     <h4> Snapshots </h4>
