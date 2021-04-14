@@ -32,6 +32,23 @@ Application that allows you to save your your favorite university across the glo
 <li> <strong>View</strong>: Aura Lightning Web Component
 <ul>
 <li> Data is rendered through Aura and CSS and SLDS is used for styling </li>
+<br>
+<li> <strong>Components</strong>: 
+<ul>
+<li> FrontEnd has been broken down many components to simplify the complexity of logic and design
+<li>universityHeader</li>
+    <li>universityShow</li>
+        <ul>
+            <li>searchField</li>
+                <ul>
+                    <li>universityOutputs</li>
+                        <ul>
+                            <li>savedUniversities</li>
+                        </ul>
+                </ul>
+        </ul>
+    <li>universityFooter</li>
+</ul>
 </ul>
 <br>
 <li> <strong>Controller</strong>: JavaScript and Apex
