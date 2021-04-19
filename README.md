@@ -96,5 +96,6 @@
         <li> CSS </li>
         <li> JavaScript </li>
         <li> Salesforce Database </li>
+        <li> SOQL </li>
         <li> Salesforce Lightning Design System(SLDS) </li>
     </ul>
